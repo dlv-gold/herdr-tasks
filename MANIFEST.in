@@ -1,4 +1,4 @@
-include herdr-plugin.toml requirements.lock README.md AGENTS.md .gitignore CHANGELOG.md
+include herdr-plugin.toml requirements.lock README.md AGENTS.md .gitignore CHANGELOG.md LICENSE
 recursive-include scripts *.py
 recursive-include notes *.md
 recursive-include tests *.py

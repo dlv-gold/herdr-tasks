@@ -18,6 +18,7 @@ def test_release_excludes_local_credentials_and_state(tmp_path):
         "MANIFEST.in",
         "README.md",
         "CHANGELOG.md",
+        "LICENSE",
         "AGENTS.md",
         ".gitignore",
         "requirements.lock",
@@ -90,6 +91,11 @@ def test_release_excludes_local_credentials_and_state(tmp_path):
         "scripts/bootstrap.py",
     } <= source_files.keys()
     assert "herdr_tasks/providers.py" in wheel_files
+    assert source_files["LICENSE"] == (root / "LICENSE").read_bytes()
+    wheel_license = next(
+        name for name in wheel_files if name.endswith(".dist-info/licenses/LICENSE")
+    )
+    assert wheel_files[wheel_license] == source_files["LICENSE"]
     for files in (source_files, wheel_files):
         for name, content in files.items():
             assert Path(name).name not in private_names, name

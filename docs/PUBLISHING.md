@@ -8,7 +8,7 @@ Herdr installs plugins from public GitHub repositories. The [Herdr marketplace](
 
 ## Before the first public push
 
-1. Select a license, add its full text as `LICENSE`, and declare the corresponding SPDX identifier in `pyproject.toml`. Include the license in release artifacts.
+1. The project uses the MIT license, declared in `pyproject.toml`. Keep the full `LICENSE` text and copyright notice in source and release artifacts; the packaging test verifies inclusion.
 2. Choose the GitHub owner and repository name. Replace `OWNER/herdr-tasks` below with that actual destination when adding installation instructions to the README.
 3. Review the commit author name and email; commits make them public when pushed. Use the maintainer's chosen Git identity, including a GitHub no-reply address if preferred.
 4. Confirm the manifest and Python package versions match. Leave the changelog entry unreleased until the actual release date.

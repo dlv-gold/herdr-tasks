@@ -184,3 +184,7 @@ See the [publishing guide](docs/PUBLISHING.md) for GitHub setup, license selecti
 Share the source distribution in `dist/` or the reviewed repository source. The source distribution includes the Herdr manifest and installation scripts; the Python wheel alone is not a complete Herdr plugin checkout. Do not zip an installed checkout with its virtual environment or include anything from your Herdr config/state directories.
 
 Git and package exclusions cover common credential files, environment files, local CLI settings, databases, logs, and backups. The release regression test builds both package formats with planted synthetic private files and checks that those files and their contents are absent. These checks reduce accidental inclusion; they do not detect every possible secret pasted into source code.
+
+## License
+
+Herdr Tasks is licensed under the [MIT License](LICENSE).

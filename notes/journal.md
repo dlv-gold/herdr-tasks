@@ -114,3 +114,8 @@
 - Refreshed documentation previews with temporary example data, including the description toggles. Added whitespace normalization to the preview generator.
 - The packaging regression test, source/wheel build, Ruff checks, and manifest/version checks passed. Git preparation excludes local credentials, virtual environments, databases, and generated build artifacts.
 - License selection and the eventual GitHub destination remain pending. No remote repository, push, public listing, or release was created; the existing configured Git identity is used only for the local initial commit.
+
+## 2026-09-16 — MIT license selected
+
+- Added the user-selected MIT license with the maintainer's copyright notice, declared MIT and the license file in Python package metadata, and linked the license from the README.
+- Updated publication instructions and package verification to require the full license in both source and wheel artifacts. GitHub destination and publication remain pending.

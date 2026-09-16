@@ -7,6 +7,8 @@ name = "herdr-tasks"
 version = "0.1.0"
 description = "Daily tasks, weekly missions, and overnight reports inside Herdr"
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.11"
 dependencies = ["textual==8.2.8", "jsonschema>=4.23,<5"]
 
