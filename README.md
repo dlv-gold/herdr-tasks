@@ -8,7 +8,7 @@ A right-side task panel for Herdr, with daily project reports and weekly mission
 - **Two reporting roles:** a summarizer followed by a planner; choose Codex or Claude independently for each.
 - **Shared local state:** projects and tasks stay available across Herdr tabs, sessions, and restarts.
 
-<img src="docs/board.svg" alt="Task board with example data" width="360">
+<img src="docs/board.svg" alt="Task board with example data" height="420">
 
 ## Install
 
@@ -177,13 +177,9 @@ HERDR_TASKS_LIVE_TEST=1 .venv/bin/python -m pytest tests/test_live_herdr.py -q
 
 Generate UI previews with `.venv/bin/python scripts/preview.py`; this uses temporary example data and no agents. See [architecture](notes/architecture.md) and [implementation journal](notes/journal.md) for design and verification details.
 
-### Preparing a release
+### For maintainers
 
-See the [publishing guide](docs/PUBLISHING.md) for GitHub setup, license selection, verification, and Herdr marketplace discovery. Release notes are in [CHANGELOG.md](CHANGELOG.md). Publication is currently deferred.
-
-Share the source distribution in `dist/` or the reviewed repository source. The source distribution includes the Herdr manifest and installation scripts; the Python wheel alone is not a complete Herdr plugin checkout. Do not zip an installed checkout with its virtual environment or include anything from your Herdr config/state directories.
-
-Git and package exclusions cover common credential files, environment files, local CLI settings, databases, logs, and backups. The release regression test builds both package formats with planted synthetic private files and checks that those files and their contents are absent. These checks reduce accidental inclusion; they do not detect every possible secret pasted into source code.
+See the [publishing guide](docs/PUBLISHING.md) for release preparation and Herdr marketplace listing, and [CHANGELOG.md](CHANGELOG.md) for release notes.
 
 ## License
 
