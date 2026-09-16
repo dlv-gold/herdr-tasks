@@ -8,7 +8,7 @@ A right-side task panel for Herdr, with daily project reports and weekly mission
 - **Two reporting roles:** a summarizer followed by a planner; choose Codex or Claude independently for each.
 - **Shared local state:** projects and tasks stay available across Herdr tabs, sessions, and restarts.
 
-![Task board with example data](docs/board.svg)
+<img src="docs/board.svg" alt="Task board with example data" width="360">
 
 ## Install
 
