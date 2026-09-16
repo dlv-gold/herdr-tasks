@@ -1,0 +1,58 @@
+id = "herdr-tasks"
+name = "Herdr Tasks"
+version = "0.1.0"
+min_herdr_version = "0.9.0"
+description = "Daily tasks, weekly missions, and scheduled project reports"
+platforms = ["linux"]
+
+[[build]]
+command = ["python3", "scripts/bootstrap.py"]
+
+[[startup]]
+command = ["python3", "scripts/launch.py", "ensure-running"]
+
+[[events]]
+on = "pane.focused"
+command = ["python3", "scripts/launch.py", "ensure-running"]
+
+[[actions]]
+id = "toggle"
+title = "Toggle task panel"
+contexts = ["global", "pane"]
+command = ["python3", "scripts/launch.py", "toggle"]
+
+[[actions]]
+id = "add-task"
+title = "Add daily task"
+contexts = ["global", "pane"]
+command = ["python3", "scripts/launch.py", "open", "--view", "add-task"]
+
+[[actions]]
+id = "add-mission"
+title = "Add weekly mission"
+contexts = ["global", "pane"]
+command = ["python3", "scripts/launch.py", "open", "--view", "add-mission"]
+
+[[actions]]
+id = "reports"
+title = "Open project reports"
+contexts = ["global", "pane"]
+command = ["python3", "scripts/launch.py", "open", "--view", "reports"]
+
+[[actions]]
+id = "settings"
+title = "Configure schedules and AI providers"
+contexts = ["global", "pane"]
+command = ["python3", "scripts/launch.py", "open", "--view", "settings"]
+
+[[actions]]
+id = "start"
+title = "Start task scheduling"
+contexts = ["global"]
+command = ["python3", "scripts/launch.py", "ensure-running"]
+
+[[panes]]
+id = "board"
+title = "Tasks"
+placement = "split"
+command = ["python3", "scripts/launch.py", "ui"]

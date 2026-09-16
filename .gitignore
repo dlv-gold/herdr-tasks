@@ -1,0 +1,33 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+.coverage
+.local/
+
+# Authentication and machine-local settings must never be published.
+.env
+.env.*
+.codex/
+.claude/
+.config/
+auth.json*
+credentials.json*
+.credentials.json*
+secrets.json*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Plugin runtime data and backups belong in the user's state directory.
+*.db
+*.db-*
+*.sqlite*
+*.log
+*.bak
+reports/

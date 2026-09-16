@@ -1,0 +1,16 @@
+include herdr-plugin.toml requirements.lock README.md AGENTS.md .gitignore CHANGELOG.md
+recursive-include scripts *.py
+recursive-include notes *.md
+recursive-include tests *.py
+recursive-include docs *.svg
+recursive-include docs *.md
+
+# Defense in depth when building from a checkout with local data present.
+prune .venv
+prune .codex
+prune .claude
+prune .config
+prune .local
+prune reports
+global-exclude .env .env.* auth.json* credentials.json* .credentials.json* secrets.json*
+global-exclude *.pem *.key *.p12 *.pfx *.db *.db-* *.sqlite* *.log *.bak *.py[cod]
